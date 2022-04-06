@@ -29,6 +29,6 @@ con.connect(function(err) {
     ];
     con.query(sql, [values], function (err, result) {
         if (err) throw err;
-        console.log("multiple records inserted");
+        console.log("multiple records inserted:" + result.affectedRows);
     });
 });
